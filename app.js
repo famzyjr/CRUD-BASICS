@@ -40,10 +40,9 @@ createTasks()
 
 let createTasks = () => {
   tasks.innerHTML = '';
-  data.map((item,index)=>{
+  data.map((item)=>{
       tasks.innerHTML += `
  <div>
-   <p>${index}</p>
  <span class="fw-bold">${item.text}</span>
  <span class="small text-secondary">${item.date}</span>
   <p>${item.description}</p>
