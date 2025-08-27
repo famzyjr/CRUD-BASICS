@@ -31,11 +31,7 @@ let formValidation = () => {
 let data = [];
 
 let acceptData = () => {
-  data.push({
-  'text':input.value,
-  'date': dateInput.value,
-  'description': textarea.value,
-  })
+  data.push({'text':input.value,'date': dateInput.value,'description': textarea.value})
   console.log(data);
   // localstorage.setdata is use to store the item. te localstorage takes a key and a Value, localstorage.getItem is use to rective data
   localStorage.setItem("data",JSON.stringify(data));
@@ -87,7 +83,7 @@ let restForm = () => {
   textarea.value = '';
 }
 (()=>{
-  data  = JSON.parse(localStorage.getItem('data'))
+  data  = JSON.parse(localStorage.getItem('data')) || []
   createTasks()
   console.log(data);
   
